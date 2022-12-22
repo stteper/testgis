@@ -19,8 +19,23 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint:es": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "lint:css": "stylelint src",
+    "lint:css:fix": "npm run lint:css -- --fix",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.(js|jsx|ts|tsx)": [
+      "npx prettier --write",
+      "npm run lint:es:fix"
+    ],
+    "*.scss": [
+      "npx prettier --write",
+      "npm run lint:css:fix"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +54,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-clean-order": "^2.2.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0"
   }
 }
