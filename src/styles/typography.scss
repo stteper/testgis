@@ -1,0 +1,59 @@
+body {
+  font-family: var(--font-family-inter);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+}
+
+@mixin typography-head-1 {
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  line-height: 28px;
+}
+
+@mixin typography-head-2 {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  line-height: 28px;
+}
+
+@mixin typography-head-3 {
+  font-size: 17px;
+  font-weight: var(--font-weight-bold);
+  line-height: 20px;
+}
+
+@mixin typography-head-4 {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+}
+
+@mixin typography-text-1 {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@mixin typography-text-2 {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@mixin typography-text-3 {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin typography-text-4 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin typography-text-5 {
+  font-size: 11px;
+  line-height: 20px;
+}
+
+@mixin typography-text-6 {
+  font-size: 11px;
+  line-height: 16px;
+}

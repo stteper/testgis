@@ -1,0 +1,35 @@
+$fonts-directory: '../../public/fonts';
+
+@font-face {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fonts-directory}/inter-variable-font_wght.woff2') format('woff2-variations'),
+    url('#{$fonts-directory}/inter-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fonts-directory}/inter-variable-font_wght.woff2') format('woff2-variations'),
+    url('#{$fonts-directory}/inter-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$fonts-directory}/inter-variable-font_wght.woff2') format('woff2-variations'),
+    url('#{$fonts-directory}/inter-semibold.woff2') format('woff2');
+}
+
+:root {
+  --font-family-inter: inter, arial, serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+}

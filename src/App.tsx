@@ -1,4 +1,5 @@
-import './App.scss'
+import './styles/global.scss'
+
 import React from 'react'
 
 import logo from './logo.svg'
