@@ -1,0 +1,51 @@
+$sizes: (
+  sm: 572px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+/* stylelint-disable scss/no-global-function-names */
+@mixin media-breakpoint-down($size) {
+  $max: map-get($sizes, $size);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-up($size) {
+  $min: map-get($sizes, $size);
+
+  @if $min {
+    @media (max-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper) {
+  $min: map-get($sizes, $lower);
+  $max: map-get($sizes, $upper);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $sizes) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $sizes) {
+      @content;
+    }
+  }
+}
+/* stylelint-enable scss/no-global-function-names */

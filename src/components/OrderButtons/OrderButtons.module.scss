@@ -1,0 +1,7 @@
+@import 'src/styles/mixins/plug';
+
+.orderButtons {
+  @include plug;
+  width: 245px;
+  height: 40px;
+}

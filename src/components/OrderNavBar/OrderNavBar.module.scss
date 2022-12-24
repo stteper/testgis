@@ -1,0 +1,8 @@
+@import 'src/styles/mixins/plug';
+
+.orderNavBar {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px 20px;
+}

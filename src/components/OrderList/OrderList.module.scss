@@ -1,0 +1,29 @@
+@import 'src/styles/mixins/plug';
+
+.orderList {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.ordersContainer {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 27px;
+
+  background-color: var(--light-gray);
+}
+
+.ordersItems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}

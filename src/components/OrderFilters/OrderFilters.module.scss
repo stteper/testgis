@@ -1,0 +1,8 @@
+@import 'src/styles/mixins/plug';
+
+.orderFilters {
+  @include plug;
+  height: 56px;
+  border-top: 1px solid var(--middle-gray);
+  border-bottom: 1px solid var(--middle-gray);
+}

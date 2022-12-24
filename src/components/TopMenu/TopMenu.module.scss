@@ -1,0 +1,7 @@
+@import 'src/styles/mixins/plug';
+
+.topMenu {
+  @include plug;
+  height: 56px;
+  border-bottom: 1px solid var(--middle-gray);
+}

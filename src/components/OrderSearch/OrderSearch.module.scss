@@ -1,0 +1,7 @@
+@import 'src/styles/mixins/plug';
+
+.orderSearch {
+  flex: 1 0 auto;
+  border: 1px solid var(--middle-gray);
+  border-radius: 30px;
+}

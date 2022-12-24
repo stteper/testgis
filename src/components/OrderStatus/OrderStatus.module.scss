@@ -1,0 +1,12 @@
+@import 'src/styles/typography';
+
+.orderStatus {
+  @include typography-text-6;
+  padding: 1px 8px;
+
+  font-weight: var(--font-weight-medium);
+  color: var(--status-color, var(--main-blue));
+
+  background-color: var(--status-bg, var(--light-blue));
+  border-radius: 15px;
+}
