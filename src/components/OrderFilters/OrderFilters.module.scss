@@ -1,8 +1,74 @@
-@import 'src/styles/mixins/plug';
+@import 'src/styles/typography';
 
 .orderFilters {
-  @include plug;
-  height: 56px;
+  display: flex;
   border-top: 1px solid var(--middle-gray);
   border-bottom: 1px solid var(--middle-gray);
+}
+
+.filterItems {
+  display: flex;
+  padding: 0 20px;
+}
+
+.filterItem {
+  position: relative;
+  margin-right: 16px;
+  padding: 18px 0;
+
+  &:last-child {
+    margin-top: 0;
+  }
+}
+
+.filterLink {
+  @include typography-text-6;
+  display: inline-flex;
+
+  font-weight: var(--font-weight-bold);
+  color: var(--filter-menu-color, var(--half-black));
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: color var(--transition);
+
+  &:hover {
+    --filter-menu-color: var(--black);
+  }
+}
+
+.active {
+  --filter-menu-color: var(--black);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    height: 2px;
+
+    background-color: var(--main-blue);
+  }
+}
+
+.filterCounter {
+  @include typography-text-7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15px;
+  height: 15px;
+  margin-left: 6px;
+
+  font-weight: var(--font-weight-bold);
+  color: var(--white);
+
+  background-color: var(--light-red);
+  border-radius: 50%;
 }

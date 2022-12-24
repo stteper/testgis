@@ -1,7 +1,55 @@
-@import 'src/styles/mixins/plug';
+@import 'src/styles/typography';
 
 .topMenu {
-  @include plug;
-  height: 56px;
+  display: flex;
   border-bottom: 1px solid var(--middle-gray);
+}
+
+.topMenuItems {
+  display: flex;
+  padding: 0 20px;
+}
+
+.topMenuItem {
+  position: relative;
+  margin-right: 16px;
+  padding: 19px 0;
+
+  &:last-child {
+    margin-top: 0;
+  }
+}
+
+.topMenuLink {
+  @include typography-text-6;
+
+  font-weight: var(--font-weight-bold);
+  color: var(--top-menu-color, var(--half-black));
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: color var(--transition);
+
+  &:hover {
+    --top-menu-color: var(--black);
+  }
+}
+
+.active {
+  --top-menu-color: var(--black);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    height: 2px;
+
+    background-color: var(--main-blue);
+  }
 }

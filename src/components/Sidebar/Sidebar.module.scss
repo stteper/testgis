@@ -1,10 +1,69 @@
-@import 'src/styles/mixins/plug';
+@import 'src/styles/typography';
 
 .sidebar {
-  @include plug;
-
   width: 200px;
   min-width: 200px;
   height: calc(100vh - 2px);
   box-shadow: var(--sidebar-shadow);
+}
+
+.sidebarLogo {
+  padding: 24px 24px 16px;
+}
+
+.sidebarMenu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarMenuItem {
+  position: relative;
+}
+
+.sidebarMenuLink {
+  @include typography-text-5;
+  display: flex;
+  align-items: center;
+
+  padding: 18px 24px;
+
+  font-weight: var(--font-weight-bold);
+  color: var(--sidebar-menu-color, var(--half-black));
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+
+  transition: color var(--transition);
+
+  &:hover {
+    --sidebar-menu-color: var(--black);
+  }
+}
+
+.sidebarMenuIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.active {
+  --sidebar-menu-color: var(--black);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 4px;
+
+    background-color: var(--main-blue);
+    border-radius: 0 8px 8px 0;
+  }
 }

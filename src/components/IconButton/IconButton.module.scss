@@ -1,0 +1,22 @@
+@import 'src/styles/typography';
+
+.iconButton {
+  @include typography-text-2;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 16px;
+
+  font-weight: var(--font-weight-bold);
+  color: var(--main-blue);
+
+  background-color: transparent;
+  border: 1px solid var(--btn-border, var(--middle-gray));
+  border-radius: 44px;
+
+  &:hover {
+    --btn-border: var(--main-blue);
+  }
+}
