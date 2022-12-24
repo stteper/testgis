@@ -33,3 +33,7 @@ $fonts-directory: '../../public/fonts';
   --font-weight-medium: 500;
   --font-weight-bold: 600;
 }
+
+body {
+  font-family: var(--font-family-inter);
+}

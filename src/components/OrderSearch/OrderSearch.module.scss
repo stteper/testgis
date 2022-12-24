@@ -1,7 +1,113 @@
-@import 'src/styles/mixins/plug';
+@import 'src/styles/typography';
 
 .orderSearch {
+  display: flex;
   flex: 1 0 auto;
+  align-items: center;
+
+  padding: 0 20px;
+
   border: 1px solid var(--middle-gray);
   border-radius: 30px;
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.searchForm {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+}
+
+.orderSearchType {
+  @include typography-text-2;
+
+  display: inline-flex;
+
+  min-width: 120px;
+
+  font-weight: var(--font-weight-medium);
+  color: var(--half-black);
+
+  background-color: transparent;
+  border: none;
+}
+
+.orderSearchTypeOption {
+  @include typography-text-3;
+  cursor: pointer;
+
+  z-index: 10;
+
+  padding: 10px;
+
+  color: var(--half-black);
+
+  background-color: var(--white);
+  border: 1px solid var(--middle-gray);
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 1px solid var(--middle-gray);
+  }
+
+  &:hover {
+    color: var(--main-blue);
+  }
+}
+
+.searchCheck {
+  width: 10px;
+  height: 6px;
+  margin-left: -5px;
+}
+
+.orderSearchFieldWrapper {
+  position: relative;
+
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+
+  margin-left: 16px;
+  padding-left: 16px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 1px;
+    height: 24px;
+    margin-top: -12px;
+
+    background-color: var(--middle-gray);
+  }
+}
+
+.orderSearchField {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+
+  & input {
+    @include typography-text-2;
+
+    flex: 1 0 auto;
+    color: var(--half-black);
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: var(--blue-gray);
+      opacity: 1;
+    }
+  }
 }
