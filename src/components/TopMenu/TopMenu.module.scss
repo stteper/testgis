@@ -1,7 +1,13 @@
 @import 'src/styles/typography';
 
 .topMenu {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+
   display: flex;
+
+  background: var(--white);
   border-bottom: 1px solid var(--middle-gray);
 }
 

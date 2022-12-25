@@ -3,7 +3,7 @@ import React from 'react'
 
 import styles from './App.module.scss'
 
-import OrderList from './components/OrderList/OrderList'
+import OrderDetail from './components/OrderDetail/OrderDetail'
 import Sidebar from './components/Sidebar/Sidebar'
 import TopMenu from './components/TopMenu/TopMenu'
 
@@ -15,7 +15,7 @@ function App() {
 
         <main className={styles.mainContent}>
           <TopMenu />
-          <OrderList />
+          <OrderDetail />
         </main>
       </div>
     </div>

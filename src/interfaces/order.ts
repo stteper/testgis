@@ -36,12 +36,12 @@ export interface OrderDetails extends Order {
   unloading_city: string
   transport_type: string
   scales_length_cm: number
-  scales_capacity_kg?: number
+  scales_capacity_kg: number | null
   loading_desc: string
-  downtime_desc?: string
-  downtime_cost?: string
-  additional_info?: string
-  daily_shipping_rate_kg?: number
+  downtime_desc: string | null
+  downtime_cost: number | null
+  additional_info: string | null
+  daily_shipping_rate_kg: number | null
   deviation_percent: number
   deviation_type: string
   kontur_status: number

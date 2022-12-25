@@ -1,0 +1,26 @@
+@import 'src/styles/typography';
+
+.order {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.orderHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.orderTitle {
+  @include typography-head-1;
+
+  margin-right: 8px;
+}
+
+.orderInfo {
+  @include typography-text-2;
+  display: flex;
+  gap: 12px;
+  color: var(--half-black);
+}

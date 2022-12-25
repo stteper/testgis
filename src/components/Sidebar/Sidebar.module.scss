@@ -1,9 +1,13 @@
 @import 'src/styles/typography';
 
 .sidebar {
+  position: sticky;
+  top: 0;
+
   width: 200px;
   min-width: 200px;
   height: calc(100vh - 2px);
+
   box-shadow: var(--sidebar-shadow);
 }
 

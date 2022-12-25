@@ -1,0 +1,27 @@
+@import 'src/styles/typography';
+
+.customerInfo {
+  padding: 14px 9px 14px 20px;
+  background-color: var(--middle-gray-02);
+  border: 1px solid var(--middle-gray);
+  border-radius: 8px;
+}
+
+.customerInfoTitle {
+  @include typography-text-1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.author {
+  @include typography-text-4;
+
+  color: var(--half-black);
+}

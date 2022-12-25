@@ -1,0 +1,14 @@
+@import 'src/styles/typography';
+
+.box {
+  padding: 25px;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  box-shadow: var(--drop-shadow);
+}
+
+.boxTitle {
+  @include typography-head-2;
+  margin-bottom: 24px;
+  color: var(--black);
+}

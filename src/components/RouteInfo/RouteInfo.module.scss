@@ -1,0 +1,104 @@
+@import 'src/styles/typography';
+
+.routeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.points {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+
+  text-transform: uppercase;
+}
+
+.point {
+  @include typography-text-4;
+  display: flex;
+  gap: 11px;
+  align-items: flex-end;
+
+  font-weight: var(--font-weight-bold);
+  line-height: 12px;
+  color: var(--main-blue);
+}
+
+.pointer {
+  width: 13px;
+  height: 18px;
+}
+
+.distance {
+  position: absolute;
+  right: 6px;
+  bottom: 0;
+  left: 6px;
+
+  display: flex;
+  justify-content: center;
+
+  text-transform: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='708' height='2' viewBox='0 0 708 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M707 1L0.999998 1' stroke='%23BBC5CB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='1 8'/%3E%3C/svg%3E%0A");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -2px;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: var(--blue-gray);
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -3px;
+  }
+
+  &::after {
+    right: -3px;
+  }
+}
+
+.distanceVal {
+  @include typography-text-1;
+  margin-bottom: -17px;
+  padding: 7px 16px;
+
+  font-weight: var(--font-weight-bold);
+  color: var(--main-blue);
+
+  background-color: var(--white);
+  border: 1px solid var(--middle-gray);
+  border-radius: 17px;
+}
+
+.addresses {
+  @include typography-text-3;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: var(--black);
+}
+
+.startAddress {
+  max-width: 255px;
+}
+
+.endAddress {
+  max-width: 255px;
+  text-align: right;
+}

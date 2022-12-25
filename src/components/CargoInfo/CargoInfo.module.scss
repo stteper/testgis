@@ -1,0 +1,65 @@
+@import 'src/styles/typography';
+
+.cargoInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 32px 0 37px;
+}
+
+.cargoBlock {
+  box-sizing: border-box;
+  min-height: 116px;
+  padding: 20px;
+
+  background-color: var(--light-gray);
+  border-radius: 5px;
+}
+
+.cargoBlockBlue {
+  --cargo-title-color: var(--white);
+  --cargo-val-color: var(--white);
+  --cargo-smallval-color: var(--white);
+  --cargo-smmall-opacity: 0.6;
+
+  background: var(--blue-gradient);
+}
+
+.cargoBlockTitle {
+  @include typography-text-6;
+  margin-bottom: 12px;
+  font-weight: var(--font-weight-bold);
+  color: var(--cargo-title-color, var(--half-black));
+  text-transform: uppercase;
+}
+
+.cargoBlockValue {
+  @include typography-head-3;
+  margin-bottom: 6px;
+  color: var(--cargo-val-color, var(--black));
+}
+
+.cargoBlockSmall {
+  @include typography-text-4;
+
+  color: var(--cargo-smallval-color, var(--half-black));
+  opacity: var(--cargo-smmall-opacity, 1);
+}
+
+.diagram {
+  width: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  height: 42px;
+  margin-right: 12px;
+
+  font-weight: var(--font-weight-bold);
+}
+
+.cargoDiagramWrapper {
+  display: flex;
+}
+
+.diagramText {
+  flex: 1 1 auto;
+}

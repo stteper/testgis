@@ -1,0 +1,20 @@
+@import 'src/styles/typography';
+
+.paramTable {
+  @include typography-text-2;
+
+  tr {
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  th {
+    padding: 16px 16px 16px 0;
+    color: var(--half-black);
+  }
+
+  td {
+    padding: 16px 0;
+    color: var(--black);
+  }
+}

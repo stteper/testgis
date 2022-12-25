@@ -1,0 +1,84 @@
+@import 'src/styles/typography';
+
+.timeInfo {
+  display: flex;
+  flex: 1 0 auto;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.point {
+  @include typography-text-1;
+
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+  color: var(--main-blue);
+}
+
+.separator {
+  position: relative;
+
+  display: flex;
+  flex: 1 1 auto;
+
+  height: 3px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='708' height='2' viewBox='0 0 708 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M707 1L0.999998 1' stroke='%23BBC5CB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='1 8'/%3E%3C/svg%3E%0A");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -2px;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: var(--blue-gray);
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -3px;
+  }
+
+  &::after {
+    right: -3px;
+  }
+}
+
+.calendar {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.timer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+
+  background: var(--white);
+  border: 2px solid var(--middle-gray);
+  border-radius: 50%;
+}
+
+.timerIcon {
+  width: 20px;
+  height: 20px;
+}
