@@ -8,9 +8,9 @@ import { Icon } from '../IconButton/IconButton.props'
 const OrderDetailButtons: React.FC = () => {
   return (
     <div className={styles.orderButtons}>
-      <IconButton icon={Icon.add} text={'Добавить рейсы'} />
-      <IconButton icon={Icon.edit} />
-      <IconButton icon={Icon.delete} />
+      <IconButton icon={Icon.add} text={'Добавить рейсы'} to={'/'} href={'/'} />
+      <IconButton icon={Icon.edit} to={'/'} href={'/'} />
+      <IconButton icon={Icon.delete} to={'/'} href={'/'} />
     </div>
   )
 }

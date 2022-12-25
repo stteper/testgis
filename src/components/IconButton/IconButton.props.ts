@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import { LinkProps } from 'react-router-dom'
 
 export enum Icon {
   add,
@@ -6,7 +6,8 @@ export enum Icon {
   delete,
   back,
 }
-export interface IconButtonProps extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+export interface IconButtonProps extends LinkProps {
   text?: string
   icon: Icon
+  href: string
 }

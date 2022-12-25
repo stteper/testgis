@@ -84,7 +84,7 @@ const OrderDetail: React.FC = () => {
   return (
     <div className={styles.orderDetail}>
       <div className={styles.header}>
-        <IconButton icon={Icon.back} />
+        <IconButton icon={Icon.back} to={'/'} href={'/'} />
         <OrderDetailHead item={item} />
         <OrderDetailButtons />
       </div>

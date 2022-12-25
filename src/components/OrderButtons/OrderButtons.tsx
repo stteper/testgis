@@ -9,7 +9,7 @@ import { Icon } from '../IconButton/IconButton.props'
 const OrderButtons: React.FC = () => {
   return (
     <div className={styles.orderButtons}>
-      <IconButton icon={Icon.add} text={'Новая заявка'} />
+      <IconButton icon={Icon.add} text={'Новая заявка'} to={'/'} href={'/'} />
       <SvgList className={styles.orderButtonsList} />
     </div>
   )

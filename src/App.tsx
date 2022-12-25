@@ -1,9 +1,12 @@
 import './styles/global.scss'
 import React from 'react'
 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import styles from './App.module.scss'
 
 import OrderDetail from './components/OrderDetail/OrderDetail'
+import OrderList from './components/OrderList/OrderList'
 import Sidebar from './components/Sidebar/Sidebar'
 import TopMenu from './components/TopMenu/TopMenu'
 
@@ -15,7 +18,12 @@ function App() {
 
         <main className={styles.mainContent}>
           <TopMenu />
-          <OrderDetail />
+          <Router>
+            <Routes>
+              <Route path='/' element={<OrderList />} />
+              <Route path='/orders/:id' element={<OrderDetail />} />
+            </Routes>
+          </Router>
         </main>
       </div>
     </div>
