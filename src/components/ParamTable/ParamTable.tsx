@@ -4,6 +4,10 @@ import styles from './ParamTable.module.scss'
 import { ParamTableProps } from './ParamTable.props'
 
 const ParamTable: React.FC<ParamTableProps> = ({ params }) => {
+  if (!params) {
+    return null
+  }
+
   return (
     <table className={styles.paramTable}>
       <tbody>
