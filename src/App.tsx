@@ -21,7 +21,7 @@ function App() {
 
           <main className={styles.mainContent}>
             <TopMenu />
-            <Router>
+            <Router basename={`/${process.env.PUBLIC_URL}`}>
               <Routes>
                 <Route path='/' element={<OrderList />} />
                 <Route path='/orders/:id' element={<OrderDetail />} />
