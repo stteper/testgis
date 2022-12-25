@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/testgis/static/css/main.5d400f26.css",
+    "main.js": "/testgis/static/js/main.e712445f.js",
+    "static/js/787.d20a472b.chunk.js": "/testgis/static/js/787.d20a472b.chunk.js",
+    "static/media/inter-variable-font_wght.woff2": "/testgis/static/media/inter-variable-font_wght.b2b32f7882156658c072.woff2",
+    "static/media/inter-semibold.woff2": "/testgis/static/media/inter-semibold.ab564c2dbbe039da8cb5.woff2",
+    "static/media/inter-medium.woff2": "/testgis/static/media/inter-medium.8a50feca5194fae5cc45.woff2",
+    "static/media/inter-regular.woff2": "/testgis/static/media/inter-regular.6fcad65b7a8f7ffabb8e.woff2",
+    "static/media/partners.svg": "/testgis/static/media/partners.6d89ea9e2fc7f2526ef8c1b63132174e.svg",
+    "static/media/list.svg": "/testgis/static/media/list.e460d30d597516e5083b4cd04ad5b6d4.svg",
+    "static/media/logo.svg": "/testgis/static/media/logo.c35f1e24ddea009c842cc66dcdf72339.svg",
+    "static/media/verifying.svg": "/testgis/static/media/verifying.79222340b702295f27de343e046c47af.svg",
+    "static/media/blog.svg": "/testgis/static/media/blog.447ba7a8f06baace7827565f8fab78c9.svg",
+    "static/media/orders.svg": "/testgis/static/media/orders.bba14ab1dbdb6154365c24d5f5519a75.svg",
+    "static/media/delete.svg": "/testgis/static/media/delete.793351e8518e30598bd3f690a3b8921e.svg",
+    "static/media/cabinet.svg": "/testgis/static/media/cabinet.f54e399dcd9be0d5d18b49b8d67e911b.svg",
+    "static/media/view.svg": "/testgis/static/media/view.523f5a8268abf2a684c9677445ba6d74.svg",
+    "index.html": "/testgis/index.html",
+    "static/media/calendar.svg": "/testgis/static/media/calendar.cbb0b17106c32d67502207593b6671af.svg",
+    "static/media/clock-3.svg": "/testgis/static/media/clock-3.c654128969a62d820c1b3bfe4c4be2c8.svg",
+    "static/media/back.svg": "/testgis/static/media/back.6236d65b79d7bf4ad5a9fc1207907e07.svg",
+    "static/media/inform.svg": "/testgis/static/media/inform.594d48b7665c841a8fe27555343ea832.svg",
+    "static/media/edit.svg": "/testgis/static/media/edit.14aca45c6c7a31e2f4254b9c22fdc0e3.svg",
+    "static/media/marker.svg": "/testgis/static/media/marker.8facbe48bc0423aa54c6dee69dda6143.svg",
+    "static/media/plus.svg": "/testgis/static/media/plus.4566f72f684b341d846f2c359b32b7e8.svg",
+    "static/media/search.svg": "/testgis/static/media/search.7e11f565c5ce2946b4bd1178131ea517.svg",
+    "static/media/time.svg": "/testgis/static/media/time.e7ffc78836fe14c90753135e7f41bad9.svg",
+    "static/media/check-2.svg": "/testgis/static/media/check-2.c8af7c4ddf037a405859fc3620c06df3.svg",
+    "main.5d400f26.css.map": "/testgis/static/css/main.5d400f26.css.map",
+    "main.e712445f.js.map": "/testgis/static/js/main.e712445f.js.map",
+    "787.d20a472b.chunk.js.map": "/testgis/static/js/787.d20a472b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d400f26.css",
+    "static/js/main.e712445f.js"
+  ]
+}
