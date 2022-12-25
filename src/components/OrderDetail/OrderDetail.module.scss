@@ -1,9 +1,14 @@
+@import 'src/styles/media';
+
 .orderDetail {
   display: flex;
   flex-direction: column;
 }
 
 .container {
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: 1fr;
+  }
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
@@ -11,19 +16,40 @@
 }
 
 .additionalInfo {
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+  }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 20px;
 }
 
+.leftCol {
+  @include media-breakpoint-down(xl) {
+    order: 2;
+  }
+}
+
 .rightCol {
+  @include media-breakpoint-down(xl) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    order: 1;
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+  }
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .header {
+  @include media-breakpoint-down(xl) {
+    flex-wrap: wrap;
+  }
   display: flex;
   gap: 16px;
   align-items: flex-start;

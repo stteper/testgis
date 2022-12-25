@@ -1,4 +1,9 @@
+@import 'src/styles/media';
+
 .layout {
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
   display: flex;
 }
 

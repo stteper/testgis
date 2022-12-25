@@ -1,6 +1,9 @@
-@import 'src/styles/mixins/plug';
+@import 'src/styles/media';
 
 .orderNavBar {
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+  }
   z-index: 10;
 
   display: flex;

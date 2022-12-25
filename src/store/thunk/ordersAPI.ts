@@ -3,6 +3,7 @@ import { Order, OrderDetails } from '../../interfaces/order'
 interface OrdersAPI {
   readonly baseUrl: string
   getOrders: () => Promise<Order[]>
+  getOrderById: (id: number) => Promise<OrderDetails>
 }
 class ordersAPI implements OrdersAPI {
   baseUrl = ''

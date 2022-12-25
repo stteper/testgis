@@ -44,8 +44,8 @@ const CargoInfo: React.FC<CargoInfoProps> = ({ item }) => {
       <div className={styles.cargoBlock}>
         <p className={styles.cargoBlockTitle}>Тариф</p>
         <p className={styles.cargoBlockValue}>{Math.round(item.tariff_c / 100)} ₽ / тонна</p>
-        {item.downtime_cost && (
-          <p className={styles.cargoBlockSmall}>Простой {Math.round(item.downtime_cost / 100)} ₽ / сутки</p>
+        {Boolean(item.downtime_cost) && (
+          <p className={styles.cargoBlockSmall}>Простой {Math.round(item.downtime_cost ?? 0 / 100)} ₽ / сутки</p>
         )}
       </div>
     </div>

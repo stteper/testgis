@@ -1,6 +1,16 @@
 @import 'src/styles/typography';
+@import 'src/styles/media';
 
 .sidebar {
+  @include media-breakpoint-down(md) {
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+  }
   position: sticky;
   top: 0;
 
@@ -12,10 +22,16 @@
 }
 
 .sidebarLogo {
+  max-width: 200px;
   padding: 24px 24px 16px;
 }
 
 .sidebarMenu {
+  @include media-breakpoint-down(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -28,6 +44,10 @@
 
 .sidebarMenuLink {
   @include typography-text-5;
+
+  @include media-breakpoint-down(md) {
+    padding: 10px 24px;
+  }
   display: flex;
   align-items: center;
 
@@ -56,6 +76,9 @@
   --sidebar-menu-color: var(--black);
 
   &::before {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
     content: '';
 
     position: absolute;

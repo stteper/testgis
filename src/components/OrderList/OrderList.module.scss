@@ -1,4 +1,4 @@
-@import 'src/styles/mixins/plug';
+@import 'src/styles/media';
 
 .orderList {
   display: flex;
@@ -19,6 +19,13 @@
 }
 
 .ordersItems {
+  @include media-breakpoint-down(xxl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;

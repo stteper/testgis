@@ -1,4 +1,5 @@
 @import 'src/styles/typography';
+@import 'src/styles/media';
 
 .order {
   display: flex;
@@ -21,6 +22,7 @@
 .orderInfo {
   @include typography-text-2;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   color: var(--half-black);
 }

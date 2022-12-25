@@ -1,6 +1,10 @@
 @import 'src/styles/typography';
+@import 'src/styles/media';
 
 .cargoInfo {
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+  }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
