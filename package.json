@@ -38,7 +38,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "predeploy": "npm tun build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "lint-staged": {
