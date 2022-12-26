@@ -37,16 +37,18 @@ const OrderSearch: React.FC = () => {
       <SvgSearch className={styles.searchIcon} />
 
       <div className={styles.searchForm}>
-        <SelectUnstyled className={styles.orderSearchType} value={selectType} onChange={changeSelectTypeHandler}>
-          <OptionUnstyled className={styles.orderSearchTypeOption} value={'id'}>
-            По номеру заявки
-          </OptionUnstyled>
-          <OptionUnstyled className={styles.orderSearchTypeOption} value={'date'}>
-            По дате создания
-          </OptionUnstyled>
-        </SelectUnstyled>
+        <div className={styles.orderSearchTypeWrapper}>
+          <SelectUnstyled className={styles.orderSearchType} value={selectType} onChange={changeSelectTypeHandler}>
+            <OptionUnstyled className={styles.orderSearchTypeOption} value={'id'}>
+              По номеру заявки
+            </OptionUnstyled>
+            <OptionUnstyled className={styles.orderSearchTypeOption} value={'date'}>
+              По дате создания
+            </OptionUnstyled>
+          </SelectUnstyled>
 
-        <SvgCheck className={styles.searchCheck} />
+          <SvgCheck className={styles.searchCheck} />
+        </div>
 
         <div className={styles.orderSearchFieldWrapper}>
           <InputUnstyled

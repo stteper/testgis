@@ -1,6 +1,11 @@
 @import 'src/styles/typography';
+@import 'src/styles/media';
 
 .orderSearch {
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
   display: flex;
   flex: 1 0 auto;
   align-items: center;
@@ -12,14 +17,27 @@
 }
 
 .searchIcon {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
   width: 24px;
+  min-width: 24px;
   height: 24px;
 }
 
 .searchForm {
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    gap: 10px;
+  }
   display: flex;
   flex: 1 0 auto;
   align-items: center;
+}
+
+.orderSearchTypeWrapper {
+  position: relative;
+  z-index: 2;
 }
 
 .orderSearchType {
@@ -66,6 +84,14 @@
 }
 
 .orderSearchFieldWrapper {
+  @include media-breakpoint-down(sm) {
+    margin-left: 5px;
+    padding-left: 5px;
+
+    &::before {
+      content: none;
+    }
+  }
   position: relative;
 
   display: flex;
@@ -100,6 +126,10 @@
 
   & input {
     @include typography-text-2;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
 
     flex: 1 0 auto;
     color: var(--half-black);
