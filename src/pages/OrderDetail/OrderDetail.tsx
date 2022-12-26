@@ -4,21 +4,20 @@ import { useParams } from 'react-router-dom'
 
 import styles from './OrderDetail.module.scss'
 
+import Box from '../../components/Box/Box'
+import CargoInfo from '../../components/CargoInfo/CargoInfo'
+import CustomerInfo from '../../components/CustomerInfo/CustomerInfo'
+import IconButton from '../../components/IconButton/IconButton'
+import { Icon } from '../../components/IconButton/IconButton.props'
+import OrderDetailButtons from '../../components/OrderDetailButtons/OrderDetailButtons'
+import OrderDetailHead from '../../components/OrderDetailHead/OrderDetailHead'
+import ParamTable from '../../components/ParamTable/ParamTable'
+import { Parameter } from '../../components/ParamTable/ParamTable.props'
+import RouteInfo from '../../components/RouteInfo/RouteInfo'
+import TimeInfo from '../../components/TimeInfo/TimeInfo'
 import { OrderDetails } from '../../interfaces/order'
 import { getOrder, queryOrderData, getAdditionalParams } from '../../store/slices/order'
-
 import { useAppDispatch, useAppSelector } from '../../store/store'
-import Box from '../Box/Box'
-import CargoInfo from '../CargoInfo/CargoInfo'
-import CustomerInfo from '../CustomerInfo/CustomerInfo'
-import IconButton from '../IconButton/IconButton'
-import { Icon } from '../IconButton/IconButton.props'
-import OrderDetailButtons from '../OrderDetailButtons/OrderDetailButtons'
-import OrderDetailHead from '../OrderDetailHead/OrderDetailHead'
-import ParamTable from '../ParamTable/ParamTable'
-import { Parameter } from '../ParamTable/ParamTable.props'
-import RouteInfo from '../RouteInfo/RouteInfo'
-import TimeInfo from '../TimeInfo/TimeInfo'
 
 const OrderDetail: React.FC = () => {
   const routeParams = useParams()

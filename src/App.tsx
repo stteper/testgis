@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import styles from './App.module.scss'
 
-import OrderDetail from './components/OrderDetail/OrderDetail'
-import OrderList from './components/OrderList/OrderList'
-import Sidebar from './components/Sidebar/Sidebar'
-import TopMenu from './components/TopMenu/TopMenu'
+import Sidebar from './layout/Sidebar/Sidebar'
+import TopMenu from './layout/TopMenu/TopMenu'
+import OrderDetail from './pages/OrderDetail/OrderDetail'
+import OrderList from './pages/OrderList/OrderList'
 import { store } from './store/store'
 
 function App() {

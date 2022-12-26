@@ -1,5 +1,5 @@
-@import 'src/styles/typography';
-@import 'src/styles/media';
+@import '../../styles/typography';
+@import '../../styles/media';
 
 .sidebar {
   @include media-breakpoint-down(md) {

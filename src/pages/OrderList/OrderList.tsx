@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 
 import styles from './OrderList.module.scss'
 
+import OrderFilters from '../../components/OrderFilters/OrderFilters'
+import OrderItem from '../../components/OrderItem/OrderItem'
+import OrderItemSkeleton from '../../components/OrderItem/OrderItemSkeleton'
+import OrderNavBar from '../../components/OrderNavBar/OrderNavBar'
 import { Order } from '../../interfaces/order'
 import { getFilteredOrders, queryOrders } from '../../store/slices/orders'
 import { useAppDispatch, useAppSelector } from '../../store/store'
-import OrderFilters from '../OrderFilters/OrderFilters'
-import OrderItem from '../OrderItem/OrderItem'
-import OrderItemSkeleton from '../OrderItem/OrderItemSkeleton'
-import OrderNavBar from '../OrderNavBar/OrderNavBar'
 
 const OrderList: React.FC = () => {
   const dispatch = useAppDispatch()
