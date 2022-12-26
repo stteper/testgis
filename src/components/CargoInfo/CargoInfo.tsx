@@ -8,9 +8,7 @@ import { CargoInfoProps } from './CargoInfo.props'
 import 'react-circular-progressbar/dist/styles.css'
 const CargoInfo: React.FC<CargoInfoProps> = ({ item }) => {
   let percentage = Math.round((100 * item.tonnage_kg) / item.tonnage_balance_kg)
-  if (Number.isNaN(percentage)) {
-    percentage = 0
-  }
+  percentage = Number.isNaN(percentage) ? 0 : percentage
 
   return (
     <div className={styles.cargoInfo}>
