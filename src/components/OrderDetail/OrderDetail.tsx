@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react'
 
-import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-
-import { AnyAction } from 'redux'
 
 import styles from './OrderDetail.module.scss'
 
 import { OrderDetails } from '../../interfaces/order'
 import { getOrder, queryOrderData, getAdditionalParams } from '../../store/slices/order'
 
+import { useAppDispatch, useAppSelector } from '../../store/store'
 import Box from '../Box/Box'
 import CargoInfo from '../CargoInfo/CargoInfo'
 import CustomerInfo from '../CustomerInfo/CustomerInfo'
@@ -26,14 +24,14 @@ const OrderDetail: React.FC = () => {
   const routeParams = useParams()
   const id = Number.parseInt(routeParams.id as string)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(queryOrderData(id) as AnyAction)
+    dispatch(queryOrderData(id))
   }, [dispatch, id])
 
-  const item: OrderDetails | null = useSelector(getOrder)
-  const params: Parameter[] = useSelector(getAdditionalParams)
+  const item: OrderDetails | null = useAppSelector(getOrder)
+  const params: Parameter[] = useAppSelector(getAdditionalParams)
 
   return (
     item && (

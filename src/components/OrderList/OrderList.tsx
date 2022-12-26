@@ -1,25 +1,23 @@
 import React, { useEffect } from 'react'
 
-import { useDispatch, useSelector } from 'react-redux'
-import { AnyAction } from 'redux'
-
 import styles from './OrderList.module.scss'
 
 import { Order } from '../../interfaces/order'
 import { getFilteredOrders, queryOrders } from '../../store/slices/orders'
+import { useAppDispatch, useAppSelector } from '../../store/store'
 import OrderFilters from '../OrderFilters/OrderFilters'
 import OrderItem from '../OrderItem/OrderItem'
 import OrderItemSkeleton from '../OrderItem/OrderItemSkeleton'
 import OrderNavBar from '../OrderNavBar/OrderNavBar'
 
 const OrderList: React.FC = () => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(queryOrders() as AnyAction)
+    dispatch(queryOrders())
   }, [dispatch])
 
-  const items: Order[] = useSelector(getFilteredOrders)
+  const items: Order[] = useAppSelector(getFilteredOrders)
 
   return (
     <div className={styles.orderList}>

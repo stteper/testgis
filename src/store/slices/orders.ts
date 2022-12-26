@@ -1,7 +1,10 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk, PayloadAction, ActionReducerMapBuilder } from '@reduxjs/toolkit'
+
+import { AnyAction } from 'redux'
 
 import { Order } from '../../interfaces/order'
 import { RootState } from '../store'
+import ordersAPI from '../thunk/ordersAPI'
 
 interface OrderListState {
   orders: Order[]
@@ -14,6 +17,10 @@ const initialState: OrderListState = {
   filter: '',
   type: 'id',
 }
+
+export const queryOrders = createAsyncThunk('orders/queryOrders', async () => {
+  return await ordersAPI.getOrders()
+})
 
 export const ordersSlice = createSlice({
   name: 'orders',
@@ -30,6 +37,11 @@ export const ordersSlice = createSlice({
       state.type = action.payload === 'id' || action.payload === 'date' ? action.payload : 'id'
     },
   },
+  extraReducers: (builder: ActionReducerMapBuilder<OrderListState>) => {
+    builder.addCase(queryOrders.fulfilled, (state: OrderListState, action: AnyAction) => {
+      state.orders = [...action.payload]
+    })
+  },
 })
 
 export const { setOrders, setFilter, setFilterType } = ordersSlice.actions
@@ -43,12 +55,4 @@ export const getFilteredOrders = (state: RootState): Order[] => {
     : state.orders.orders.filter((order) =>
         state.orders.type === 'id' ? order.id.toString().indexOf(state.orders.filter) !== -1 : [],
       )
-}
-
-export const queryOrders = (): unknown => async (dispatch: any, _: RootState, extraArgument: any) => {
-  const { api } = extraArgument
-  api
-    .getOrders()
-    .then((data: Order[]) => dispatch(setOrders(data)))
-    .catch((err: Error) => console.log(err))
 }
