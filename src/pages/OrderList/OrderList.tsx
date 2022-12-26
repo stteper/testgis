@@ -10,6 +10,8 @@ import { Order } from '../../interfaces/order'
 import { getFilteredOrders, queryOrders } from '../../store/slices/orders'
 import { useAppDispatch, useAppSelector } from '../../store/store'
 
+const skeletonItems: JSX.Element[] = [...Array(12)].map((_, id) => <OrderItemSkeleton key={id} />)
+
 const OrderList: React.FC = () => {
   const dispatch = useAppDispatch()
 
@@ -26,9 +28,7 @@ const OrderList: React.FC = () => {
 
       <div className={styles.ordersContainer}>
         <div className={styles.ordersItems}>
-          {items.length > 0
-            ? items.map((item) => <OrderItem item={item} key={item.id} />)
-            : [...Array(12)].map((_, id) => <OrderItemSkeleton key={id} />)}
+          {items.length > 0 ? items.map((item) => <OrderItem item={item} key={item.id} />) : skeletonItems}
         </div>
       </div>
     </div>
