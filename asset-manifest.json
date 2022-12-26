@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/testgis/static/css/main.d11b8ba0.css",
-    "main.js": "/testgis/static/js/main.95a16e5b.js",
+    "main.css": "/testgis/static/css/main.496b7b7d.css",
+    "main.js": "/testgis/static/js/main.c17b5f20.js",
     "static/js/787.d20a472b.chunk.js": "/testgis/static/js/787.d20a472b.chunk.js",
     "static/media/inter-variable-font_wght.woff2": "/testgis/static/media/inter-variable-font_wght.b2b32f7882156658c072.woff2",
     "static/media/inter-semibold.woff2": "/testgis/static/media/inter-semibold.ab564c2dbbe039da8cb5.woff2",
@@ -27,12 +27,12 @@
     "static/media/search.svg": "/testgis/static/media/search.7e11f565c5ce2946b4bd1178131ea517.svg",
     "static/media/time.svg": "/testgis/static/media/time.e7ffc78836fe14c90753135e7f41bad9.svg",
     "static/media/check-2.svg": "/testgis/static/media/check-2.c8af7c4ddf037a405859fc3620c06df3.svg",
-    "main.d11b8ba0.css.map": "/testgis/static/css/main.d11b8ba0.css.map",
-    "main.95a16e5b.js.map": "/testgis/static/js/main.95a16e5b.js.map",
+    "main.496b7b7d.css.map": "/testgis/static/css/main.496b7b7d.css.map",
+    "main.c17b5f20.js.map": "/testgis/static/js/main.c17b5f20.js.map",
     "787.d20a472b.chunk.js.map": "/testgis/static/js/787.d20a472b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d11b8ba0.css",
-    "static/js/main.95a16e5b.js"
+    "static/css/main.496b7b7d.css",
+    "static/js/main.c17b5f20.js"
   ]
 }
