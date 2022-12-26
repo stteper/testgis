@@ -2,20 +2,19 @@
 
 .iconButton {
   @include typography-text-2;
-  cursor: pointer;
 
   display: inline-flex;
   align-items: center;
 
   padding: 8px;
+  color: var(--main-blue);
 
   font-weight: var(--font-weight-bold);
-  color: var(--main-blue);
   text-decoration: none;
-
   background-color: transparent;
   border: 1px solid var(--btn-border, var(--middle-gray));
   border-radius: 44px;
+  cursor: pointer;
 
   &:hover {
     --btn-border: var(--main-blue);

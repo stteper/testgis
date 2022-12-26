@@ -25,12 +25,11 @@
 .filterLink {
   @include typography-text-6;
   display: inline-flex;
+  color: var(--filter-menu-color, var(--half-black));
 
   font-weight: var(--font-weight-bold);
-  color: var(--filter-menu-color, var(--half-black));
-  text-decoration: none;
   text-transform: uppercase;
-
+  text-decoration: none;
   transition: color var(--transition);
 
   &:hover {
@@ -42,18 +41,15 @@
   --filter-menu-color: var(--black);
 
   &::before {
-    content: '';
-
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-
     display: block;
 
     height: 2px;
-
     background-color: var(--main-blue);
+    content: '';
   }
 }
 
@@ -66,10 +62,9 @@
   width: 15px;
   height: 15px;
   margin-left: 6px;
-
-  font-weight: var(--font-weight-bold);
   color: var(--white);
 
+  font-weight: var(--font-weight-bold);
   background-color: var(--light-red);
   border-radius: 50%;
 }

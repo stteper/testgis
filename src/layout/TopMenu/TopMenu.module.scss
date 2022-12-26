@@ -2,11 +2,9 @@
 
 .topMenu {
   position: sticky;
-  z-index: 20;
   top: 0;
-
+  z-index: 20;
   display: flex;
-
   background: var(--white);
   border-bottom: 1px solid var(--middle-gray);
 }
@@ -28,12 +26,11 @@
 
 .topMenuLink {
   @include typography-text-6;
+  color: var(--top-menu-color, var(--half-black));
 
   font-weight: var(--font-weight-bold);
-  color: var(--top-menu-color, var(--half-black));
-  text-decoration: none;
   text-transform: uppercase;
-
+  text-decoration: none;
   transition: color var(--transition);
 
   &:hover {
@@ -45,17 +42,14 @@
   --top-menu-color: var(--black);
 
   &::before {
-    content: '';
-
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-
     display: block;
 
     height: 2px;
-
     background-color: var(--main-blue);
+    content: '';
   }
 }

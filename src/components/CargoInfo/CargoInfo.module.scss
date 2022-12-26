@@ -15,7 +15,6 @@
   box-sizing: border-box;
   min-height: 116px;
   padding: 20px;
-
   background-color: var(--light-gray);
   border-radius: 5px;
 }
@@ -32,8 +31,8 @@
 .cargoBlockTitle {
   @include typography-text-6;
   margin-bottom: 12px;
-  font-weight: var(--font-weight-bold);
   color: var(--cargo-title-color, var(--half-black));
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
 
@@ -56,7 +55,6 @@
   max-width: 42px;
   height: 42px;
   margin-right: 12px;
-
   font-weight: var(--font-weight-bold);
 }
 

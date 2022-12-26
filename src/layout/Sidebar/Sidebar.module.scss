@@ -4,7 +4,6 @@
 .sidebar {
   @include media-breakpoint-down(md) {
     position: static;
-
     display: flex;
     flex-direction: column;
 
@@ -13,11 +12,9 @@
   }
   position: sticky;
   top: 0;
-
   width: 200px;
   min-width: 200px;
   height: calc(100vh - 2px);
-
   box-shadow: var(--sidebar-shadow);
 }
 
@@ -52,13 +49,12 @@
   align-items: center;
 
   padding: 18px 24px;
+  color: var(--sidebar-menu-color, var(--half-black));
 
   font-weight: var(--font-weight-bold);
-  color: var(--sidebar-menu-color, var(--half-black));
-  text-decoration: none;
-  text-transform: uppercase;
   letter-spacing: 0.3px;
-
+  text-transform: uppercase;
+  text-decoration: none;
   transition: color var(--transition);
 
   &:hover {
@@ -79,18 +75,16 @@
     @include media-breakpoint-down(md) {
       display: none;
     }
-    content: '';
 
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-
     display: block;
 
     width: 4px;
-
     background-color: var(--main-blue);
     border-radius: 0 8px 8px 0;
+    content: '';
   }
 }

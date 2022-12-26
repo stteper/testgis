@@ -1,12 +1,14 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-clean-order",
+    "stylelint-config-rational-order",
     "stylelint-config-prettier"
   ],
   "plugins": ["stylelint-order"],
   "rules": {
+    "plugin/rational-order": true,
     "no-empty-source": null,
+    "declaration-no-important": true,
     "declaration-empty-line-before": null,
     "no-missing-end-of-source-newline": null,
     "selector-class-pattern": null,
