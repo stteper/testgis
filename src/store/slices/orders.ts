@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction, ActionReducerMapBuilder } from '@reduxjs/toolkit'
-
+import dayjs from 'dayjs'
 import { AnyAction } from 'redux'
 
 import { Order } from '../../interfaces/order'
@@ -53,6 +53,10 @@ export const getFilteredOrders = (state: RootState): Order[] => {
   return state.orders.filter.length === 0
     ? state.orders.orders
     : state.orders.orders.filter((order) =>
-        state.orders.type === 'id' ? order.id.toString().indexOf(state.orders.filter) !== -1 : [],
+        state.orders.type === 'id'
+          ? order.id.toString().indexOf(state.orders.filter) !== -1
+          : state.orders.type === 'date'
+          ? order.create_dt.indexOf(dayjs(state.orders.filter).format('DD.MM.YYYY')) !== -1
+          : [],
       )
 }
