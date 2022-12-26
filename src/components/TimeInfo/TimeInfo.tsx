@@ -1,6 +1,6 @@
 import cn from 'classnames'
-import moment from 'moment/moment'
-import 'moment/locale/ru'
+import dayjs from 'dayjs'
+import 'dayjs/locale/ru'
 import React from 'react'
 
 import { ReactComponent as SvgCalendar } from './calendar.svg'
@@ -13,13 +13,11 @@ const TimeInfo: React.FC<TimeInfoProps> = ({ item }) => {
     return null
   }
 
-  moment.locale('ru')
-
   return (
     <div className={styles.timeInfo}>
       {item.load_dt && (
         <span className={cn([styles.startPoint, styles.point])}>
-          <SvgCalendar className={styles.calendar} />C {moment(item.load_dt).format('DD MMMM YYYY')}
+          <SvgCalendar className={styles.calendar} />C {dayjs(item.load_dt).locale('ru').format('DD MMMM YYYY')}
         </span>
       )}
 
@@ -32,7 +30,7 @@ const TimeInfo: React.FC<TimeInfoProps> = ({ item }) => {
       {item.ending_dt && (
         <span className={cn([styles.endPoint, styles.point])}>
           <SvgCalendar className={styles.calendar} />
-          По {moment(item.ending_dt).format('DD MMMM YYYY')}
+          По {dayjs(item.ending_dt).locale('ru').format('DD MMMM YYYY')}
         </span>
       )}
     </div>

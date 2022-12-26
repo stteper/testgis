@@ -43,8 +43,9 @@ const OrderFilters: React.FC = () => {
   return (
     <nav className={styles.orderFilters}>
       <ul className={styles.filterItems}>
-        {filters.map((filter) => (
+        {filters.map((filter, index) => (
           <li
+            key={index}
             className={cn({
               [styles.filterItem]: true,
               [styles.active]: filter.current,

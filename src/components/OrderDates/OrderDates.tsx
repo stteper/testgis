@@ -1,4 +1,4 @@
-import moment from 'moment'
+import dayjs from 'dayjs'
 import React from 'react'
 
 import styles from './OrderDates.module.scss'
@@ -9,11 +9,11 @@ const OrderDates: React.FC<OrderDatesProps> = ({ item, text, icon = false }: Ord
   const dates: string[] = []
 
   if (item.load_dt) {
-    dates.push(moment(item.load_dt).format('DD.MM.YY'))
+    dates.push(dayjs(item.load_dt).format('DD.MM.YY'))
   }
 
   if (item.ending_dt) {
-    dates.push(moment(item.ending_dt).format('DD.MM.YY'))
+    dates.push(dayjs(item.ending_dt).format('DD.MM.YY'))
   }
 
   if (dates.length === 0) {
