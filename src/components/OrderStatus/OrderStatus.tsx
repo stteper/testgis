@@ -6,12 +6,12 @@ import OrderStatusProps from './OrderStatus.props'
 
 import { OrderCurrentStatus } from '../../interfaces/order'
 
-const Statuses: { [key in OrderCurrentStatus]: String } = {
+const Statuses: Record<OrderCurrentStatus, string> = {
   [OrderCurrentStatus.active]: 'Активная',
   [OrderCurrentStatus.closed]: 'Закрыта',
 }
 
-const OrderStatus: React.FC<OrderStatusProps> = ({ item }: OrderStatusProps) => {
+const OrderStatus: React.FC<OrderStatusProps> = ({ item }) => {
   const status = item ? OrderCurrentStatus.active : OrderCurrentStatus.closed
 
   return (
