@@ -80,12 +80,8 @@
 
 .orderSearchFieldWrapper {
   @include media-breakpoint-down(sm) {
-    margin-left: 5px;
-    padding-left: 5px;
-
-    &::before {
-      content: none;
-    }
+    margin-left: 0;
+    padding-left: 0;
   }
   position: relative;
   display: flex;
@@ -107,6 +103,11 @@
     margin-top: -12px;
     background-color: var(--middle-gray);
     content: '';
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+      content: none;
+    }
   }
 }
 
